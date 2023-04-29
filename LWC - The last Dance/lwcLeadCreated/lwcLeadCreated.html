@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Criar novo Lead">
+      <div class="slds-m-around_medium">
+        <lightning-input required label="Nome" value={name} onchange={handleNameChange}></lightning-input>
+        <lightning-input required label="Sobrenome" value={lastName} onchange={handleLastNameChange}></lightning-input>
+        <lightning-input required label="Empresa" value={company} onchange={handleCompanyChange}></lightning-input>
+        <lightning-input required label="Receita Anual" value={annualRevenue} type="number" step="0.01" onchange={handleAnnualRevenueChange}></lightning-input>
+        <lightning-input required label="Classificação" value={rating} onchange={handleRatingChange}></lightning-input>
+        <lightning-input required label="Telefone" value={phone} onchange={handlePhoneChange}></lightning-input>
+        <lightning-input required label="Celular" value={mobile} onchange={handleMobileChange}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+        <lightning-button label="Criar Lead Marotamente" variant="success" onclick={createLead}></lightning-button>
+      </div>
+    </lightning-card>
+  </template>

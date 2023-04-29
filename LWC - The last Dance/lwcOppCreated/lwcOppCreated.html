@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Component de Criar Oportunidade">
+        <div class="slds-m-around_small"><!--Começo de formulario-->
+            <!--Esse formulário de Registro está fazendo 3 coisas primeiro chamando a api que recebe o nome do objeto-->
+            <!--Segundo ele pelo campo filds éstá pefando uma lista do campo correspondente ao Objeto detalhes no arquivo JS-->
+            <!--Terceiro está chamando o campo onsuccess caso haja o devido preenchimento do form vai chamar a função{handleSuccess}-->
+            <lightning-record-form object-api-name="Opportunity" fields={fields} onsuccess={handleSuccess}><!--Código está na documentação-->
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

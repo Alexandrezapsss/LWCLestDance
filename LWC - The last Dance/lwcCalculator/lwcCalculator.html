@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Calculadora">
+        <div class="slds-m-around_medium">
+            <lightning-input type="number" label="Valor 1" value={value1} onchange={handleValue1Change}></lightning-input>
+            <lightning-input type="number" label="Valor 2" value={value2} onchange={handleValue2Change}></lightning-input>
+            <div class="slds-m-top_medium">
+                <lightning-button-group>
+                    <lightning-button label="+" onclick={handleAddition} variant="success" ></lightning-button>
+                    <lightning-button label="-" onclick={handleSubtraction} variant="success" ></lightning-button>
+                    <lightning-button label="*" onclick={handleMultiplication} variant="success" ></lightning-button>
+                    <lightning-button label="/" onclick={handleDivision} variant="success" ></lightning-button>
+                </lightning-button-group>
+            </div>
+            <div class="slds-m-top_medium"><!--Só um input basico para captar o meu resultado-->
+                <lightning-input type="number" label="Resultado" value={result} disabled></lightning-input><!--disabled impede que o campo seja editado!-->
+            </div>
+            <div class="slds-m-top_medium">
+                <lightning-button label="Limpar" onclick={handleClear}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
